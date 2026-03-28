@@ -574,58 +574,81 @@ a {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 138px;
+    }
+
     .topo-site {
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        width: 100%;
         background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .menu {
-        position: static;
-        transform: none;
         width: 100%;
         max-width: none;
         min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         border-radius: 0;
         box-shadow: none;
-        padding: 12px 14px;
-        gap: 12px;
+        padding: 8px 12px 10px;
+        gap: 6px;
     }
 
     .logo {
         display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 150px;
     }
 
     .menu ul {
         width: 100%;
-        gap: 6px 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        padding-bottom: 0;
+    }
+
+    .menu li {
+        flex: 0 0 auto;
     }
 
     .menu-acoes {
-        min-width: auto;
         width: 100%;
+        justify-content: center;
         gap: 8px;
+        flex-wrap: nowrap;
     }
 
     .menu li a {
-        font-size: 15px;
-        padding: 8px 0;
+        font-size: 14px;
+        justify-content: center;
+        white-space: nowrap;
+        padding: 2px 4px;
     }
 
     .menu li a i {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .menu-acao {
-        width: 42px;
-        height: 42px;
+        width: 34px;
+        height: 34px;
     }
 
     .menu-acao i {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .conteudo {
@@ -703,20 +726,30 @@ a {
     .rede-item {
         justify-content: center;
     }
+
+    .hero,
+    .secao-marca,
+    .secao-linhas {
+        scroll-margin-top: 160px;
+    }
 }
 
 @media (max-width: 560px) {
+    body {
+        padding-top: 126px;
+    }
+
     .menu {
-        padding: 10px 12px;
+        padding: 8px 10px;
     }
 
     .logo img {
-        width: 144px;
+        width: 132px;
     }
 
     .menu ul {
-        flex-direction: column;
-        gap: 4px;
+        justify-content: center;
+        gap: 10px;
     }
 
     .menu-links {
@@ -725,10 +758,20 @@ a {
 
     .menu li a {
         justify-content: center;
+        font-size: 13px;
     }
 
     .menu-acoes {
-        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .menu-acao {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-acao i {
+        font-size: 16px;
     }
 
     .hero {
@@ -764,5 +807,11 @@ a {
     .tag-secao {
         font-size: 12px;
         letter-spacing: 0.12em;
+    }
+
+    .hero,
+    .secao-marca,
+    .secao-linhas {
+        scroll-margin-top: 132px;
     }
 }
