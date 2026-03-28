@@ -27,6 +27,7 @@ body {
     line-height: 1.6;
     background: linear-gradient(180deg, #fcfcfb 0%, var(--cinza-claro) 100%);
     color: var(--preto);
+    overflow-x: hidden;
 }
 
 img {
@@ -302,7 +303,7 @@ a {
 
 .conteudo-marca h1 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 54px;
+    font-size: clamp(2.4rem, 4vw, 3.375rem);
     line-height: 1.05;
     margin-bottom: 18px;
 }
@@ -501,12 +502,13 @@ a {
         justify-content: center;
         min-height: auto;
         height: auto;
-        padding: 10px 16px;
+        padding: 14px 16px;
     }
 
     .logo {
         justify-content: center;
         width: 100%;
+        min-width: auto;
     }
 
     .logo img {
@@ -516,6 +518,8 @@ a {
     .menu ul {
         flex-wrap: wrap;
         justify-content: center;
+        flex: 1 1 100%;
+        gap: 18px;
     }
 
     .menu-acoes {
@@ -523,87 +527,119 @@ a {
         justify-content: center;
     }
 
-    .secao-marca,
-    .grade-produtos,
-    .rodape-conteudo {
-        grid-template-columns: 1fr;
+    .conteudo {
+        padding: 12px 14px 36px;
     }
 
-    .hero,
-    .hero-slide img {
+    .hero {
         min-height: 420px;
-        height: auto;
+    }
+
+    .hero-slide img {
+        height: 420px;
+    }
+
+    .sessao {
+        padding: 56px 24px;
+    }
+
+    .sessao h2 {
+        font-size: 40px;
+    }
+
+    .secao-marca {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .imagem-marca {
+        order: -1;
+    }
+
+    .imagem-marca img {
+        height: 360px;
+    }
+
+    .card-produto {
+        max-width: min(100%, 460px);
+    }
+
+    .conteudo-produto h3 {
+        font-size: 32px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .topo-site {
-        position: static;
-        background: transparent;
-        backdrop-filter: none;
-        border-bottom: 0;
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .menu {
-        position: fixed;
-        left: 50%;
-        bottom: 20px;
-        top: auto;
-        transform: translateX(-50%);
-        width: 92%;
-        max-width: 420px;
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: none;
         min-height: auto;
-        height: auto;
         justify-content: center;
-        border-radius: 30px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        padding: 6px 10px;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 12px 14px;
+        gap: 12px;
     }
 
     .logo {
-        display: none;
+        display: flex;
     }
 
     .menu ul {
-        gap: 8px;
+        width: 100%;
+        gap: 6px 14px;
     }
 
     .menu-acoes {
         min-width: auto;
-        width: auto;
+        width: 100%;
         gap: 8px;
     }
 
     .menu li a {
-        font-size: 20px;
-        padding: 12px 8px;
+        font-size: 15px;
+        padding: 8px 0;
     }
 
     .menu li a i {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .menu-acao {
-        width: 46px;
-        height: 46px;
+        width: 42px;
+        height: 42px;
     }
 
     .menu-acao i {
-        font-size: 24px;
-    }
-
-    body {
-        margin-bottom: 110px;
+        font-size: 22px;
     }
 
     .conteudo {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .hero,
+    .hero {
+        min-height: 280px;
+        border-radius: 18px;
+    }
+
     .hero-slide img {
-        min-height: 240px;
+        height: 280px;
     }
 
     .indicadores-banner label {
@@ -611,12 +647,122 @@ a {
         height: 10px;
     }
 
-    .sessao {
-        padding: 56px 20px;
+    .controle {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 
-    .conteudo-marca h1,
+    .sessao {
+        padding: 44px 18px;
+    }
+
     .sessao h2 {
-        font-size: 40px;
+        font-size: 34px;
+    }
+
+    .conteudo-marca,
+    .cabecalho-secao {
+        text-align: center;
+    }
+
+    .cta {
+        width: 100%;
+    }
+
+    .imagem-marca img {
+        height: 280px;
+    }
+
+    .cartoes {
+        gap: 18px;
+    }
+
+    .conteudo-produto {
+        padding: 22px 18px;
+    }
+
+    .conteudo-produto h3 {
+        font-size: 28px;
+    }
+
+    .rodape-lumiere {
+        padding: 40px 18px 24px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .rodape-bloco {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rede-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .menu {
+        padding: 10px 12px;
+    }
+
+    .logo img {
+        width: 144px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .menu-links {
+        margin: 0;
+    }
+
+    .menu li a {
+        justify-content: center;
+    }
+
+    .menu-acoes {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: 220px;
+    }
+
+    .hero-slide img {
+        height: 220px;
+    }
+
+    .indicadores-banner {
+        bottom: 8px;
+    }
+
+    .indicadores-banner label {
+        width: 32px;
+        height: 8px;
+    }
+
+    .controle-esquerda {
+        left: 8px;
+    }
+
+    .controle-direita {
+        right: 8px;
+    }
+
+    .sessao h2,
+    .conteudo-marca h1 {
+        font-size: 30px;
+    }
+
+    .tag-secao {
+        font-size: 12px;
+        letter-spacing: 0.12em;
     }
 }
