@@ -4,9 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumière Hair Tech</title>
+    <link rel="icon" href="assets/logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    
+    <main class="pg-container">
+        <header class="topo-site">
+            <nav class="menu" id="menu">
+                <div class="logo">
+                    <img src="assets/logo.jpeg" alt="Logo Lumière Hair Tech">
+                </div>
+
+                <ul class="menu-links">
+                    <li><a href="#banners"><i class="bi bi-house"></i><span> Home</span></a></li>
+                    <li><a href="#sobre-marca"><i class="bi bi-person"></i><span> Sobre a marca</span></a></li>
+                    <li><a href="#linhas"><i class="bi bi-grid"></i><span> Linhas</span></a></li>
+                </ul>
+
+                <div class="menu-acoes" aria-label="Ações rápidas">
+                    <a href="#" class="menu-acao" aria-label="Buscar">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="menu-acao" aria-label="Minha conta">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                    <a href="#" class="menu-acao" aria-label="Carrinho">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+                    <a href="#" class="menu-acao" aria-label="Menu">
+                        <i class="bi bi-list"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="conteudo">
+        <section class="hero page-title" id="banners">
+            <input type="radio" name="banner" id="banner-1" checked>
+            <input type="radio" name="banner" id="banner-2">
+            <input type="radio" name="banner" id="banner-3">
+
+            <div class="hero-slides">
+                <article class="hero-slide slide-estilos">
+                    <img src="assets/banner-3.png" alt="Banner com tecnologia Lumière para todos os estilos">
+                </article>
+                <article class="hero-slide slide-lumitherm">
+                    <img src="assets/banner-2.png" alt="Banner LumiTherm com brilho extraordinário">
+                </article>
+                <article class="hero-slide slide-principal">
+                    <img src="assets/banner-1.png" alt="Banner Lumière Hair Tech com modelo e secador inteligente">
+                </article>
+            </div>
+
+            <div class="setas-banner setas-1">
+                <label for="banner-3" class="controle controle-esquerda" aria-label="Banner anterior">
+                    <i class="bi bi-chevron-left"></i>
+                </label>
+                <label for="banner-2" class="controle controle-direita" aria-label="Próximo banner">
+                    <i class="bi bi-chevron-right"></i>
+                </label>
+            </div>
+
+            <div class="setas-banner setas-2">
+                <label for="banner-1" class="controle controle-esquerda" aria-label="Banner anterior">
+                    <i class="bi bi-chevron-left"></i>
+                </label>
+                <label for="banner-3" class="controle controle-direita" aria-label="Próximo banner">
+                    <i class="bi bi-chevron-right"></i>
+                </label>
+            </div>
+
+            <div class="setas-banner setas-3">
+                <label for="banner-2" class="controle controle-esquerda" aria-label="Banner anterior">
+                    <i class="bi bi-chevron-left"></i>
+                </label>
+                <label for="banner-1" class="controle controle-direita" aria-label="Próximo banner">
+                    <i class="bi bi-chevron-right"></i>
+                </label>
+            </div>
+
+            <div class="indicadores-banner">
+                <label for="banner-1" aria-label="Ir para o banner 1"></label>
+                <label for="banner-2" aria-label="Ir para o banner 2"></label>
+                <label for="banner-3" aria-label="Ir para o banner 3"></label>
+            </div>
+        </section>
+
+        <section class="sessao secao-marca" id="sobre-marca">
+            <div class="conteudo-marca">
+                <span class="tag-secao">Sobre a Marca</span>
+                <h1>Ciência e Paixão por Trás da Beleza</h1>
+                <p>
+                    A Lumière nasceu da curiosidade científica de pesquisadores dedicados a transformar o cuidado capilar.
+                    Com a exclusiva tecnologia LumiTherm™, unimos design sofisticado e inovação para proteger seus fios do
+                    calor excessivo, entregando resultados de salão com a saúde que seu cabelo merece.
+                </p>
+                <a href="#" class="cta cta-outline">Conheça nossa história</a>
+            </div>
+
+            <div class="imagem-marca">
+                <img src="assets/sobre-marca.png" alt="Equipe Lumière Hair Tech em ambiente corporativo">
+            </div>
+        </section>
+
+        <section class="sessao secao-linhas destaque" id="linhas">
+            <div class="cabecalho-secao">
+                <h2>Explore Nossas Linhas</h2>
+            </div>
+
+            <div class="cartoes grade-produtos">
+                <article class="cartao card-produto">
+                    <img src="assets/linha-pro-home.png" alt="Linha Lumière Pro Home">
+                    <div class="conteudo-produto">
+                        <h3>Linha Lumière Pro Home</h3>
+                        <p>
+                            Potência e controle total de temperatura para quem não abre mão de precisão e um acabamento
+                            impecável todos os dias.
+                        </p>
+                        <a href="#" class="cta cta-fill">Quero resultado profissional</a>
+                    </div>
+                </article>
+
+                <article class="cartao card-produto">
+                    <img src="assets/linha-compact.png" alt="Linha Lumière Compact">
+                    <div class="conteudo-produto">
+                        <h3>Linha Lumière Compact</h3>
+                        <p>
+                            Leveza e praticidade para sua rotina ou viagens, garantindo fios modelados e brilhantes em
+                            qualquer lugar.
+                        </p>
+                        <a href="#" class="cta cta-fill">Praticidade para o meu dia</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer class="rodape-lumiere">
+        <div class="rodape-conteudo">
+            <div class="rodape-bloco">
+                <h3>Endereço</h3>
+                <p>Avenida Lumière, 2450 – Sala 12</p>
+                <p>Bairro Nova Tecnologia</p>
+                <p>São Paulo – SP, Brasil</p>
+                <p>CEP: 04567-000</p>
+            </div>
+
+            <div class="rodape-bloco">
+                <h3>Contato</h3>
+                <p>WhatsApp: (11) 98765-4321</p>
+                <p>E-mail: contato@lumierehairtech.com</p>
+            </div>
+
+            <div class="rodape-bloco">
+                <h3>Redes sociais</h3>
+                <a href="#" class="rede-item"><i class="bi bi-instagram"></i><span>@lumierehairtech</span></a>
+                <a href="#" class="rede-item"><i class="bi bi-facebook"></i><span>facebook.com/lumierehairtech</span></a>
+                <a href="#" class="rede-item rede-whatsapp"><i class="bi bi-whatsapp"></i><span>(11) 98765-4321</span></a>
+            </div>
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Lumiere Hair Tech. Todos os direitos reservados.</p>
+            <span>Tecnologia LumiTherm™ – Menos dano, mais brilho.</span>
+        </div>
+    </footer>
 </body>
 </html>
