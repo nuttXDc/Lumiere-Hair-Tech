@@ -1,0 +1,245 @@
+
+.secao-pagina-topo {
+    text-align: center;
+    padding: 72px 30px 56px;
+    background: linear-gradient(135deg, var(--champagne) 0%, var(--branco) 60%, var(--champagne-claro) 100%);
+    border-radius: 22px;
+    box-shadow: var(--sombra);
+    scroll-margin-top: 90px;
+}
+
+.secao-pagina-topo h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.subtitulo-pagina {
+    font-size: 1.1rem;
+    color: var(--texto);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.secao-historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    scroll-margin-top: 90px;
+}
+
+.conteudo-historia h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.conteudo-historia p {
+    color: var(--texto);
+    margin-bottom: 16px;
+}
+
+.conteudo-historia p strong {
+    color: var(--dourado-escuro);
+}
+
+.imagem-historia {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+.imagem-historia img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.descricao-secao {
+    color: var(--texto);
+    font-size: 1rem;
+    margin-top: -14px;
+    margin-bottom: 36px;
+}
+
+.grade-valores {
+    justify-content: center;
+}
+
+.card-valor {
+    width: 100%;
+    max-width: 260px;
+    padding: 36px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.icone-valor {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(var(--dourado-rgb), 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-valor i {
+    font-size: 28px;
+    color: var(--dourado);
+}
+
+.card-valor h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+}
+
+.card-valor p {
+    color: var(--texto);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.secao-equipe {
+    scroll-margin-top: 90px;
+}
+
+.grade-equipe {
+    justify-content: center;
+}
+
+.card-membro {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 28px;
+    text-align: center;
+    gap: 14px;
+}
+
+.avatar-membro {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(var(--dourado-rgb), 0.1);
+    border: 2px solid rgba(var(--dourado-rgb), 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-membro i {
+    font-size: 42px;
+    color: var(--dourado);
+}
+
+.conteudo-membro h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.cargo-membro {
+    color: var(--dourado);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.conteudo-membro p {
+    color: var(--texto);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.secao-cta-pagina {
+    background: linear-gradient(135deg, var(--champagne) 0%, var(--branco) 52%, var(--cinza-azulado) 100%);
+    border-radius: 22px;
+    text-align: center;
+    padding: 72px 30px;
+}
+
+.cta-pagina-conteudo h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    margin-bottom: 14px;
+}
+
+.cta-pagina-conteudo p {
+    color: var(--texto);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.cta-pagina-conteudo .cta {
+    margin-top: 28px;
+}
+
+@media (max-width: 1024px) {
+    .secao-historia {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .imagem-historia {
+        order: -1;
+    }
+
+    .imagem-historia img {
+        height: 360px;
+    }
+
+    .card-valor {
+        max-width: min(100%, 220px);
+    }
+
+    .card-membro {
+        max-width: min(100%, 280px);
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-pagina-topo {
+        padding: 52px 20px 42px;
+        scroll-margin-top: 160px;
+    }
+
+    .secao-historia,
+    .secao-valores,
+    .secao-equipe,
+    .secao-cta-pagina {
+        scroll-margin-top: 160px;
+    }
+
+    .grade-valores,
+    .grade-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-valor,
+    .card-membro {
+        max-width: 100%;
+    }
+
+    .imagem-historia img {
+        height: 280px;
+    }
+
+    .secao-cta-pagina {
+        padding: 52px 20px;
+        border-radius: 18px;
+    }
+}
