@@ -1,4 +1,7 @@
 
+/* Estilos especificos da pagina Quem Somos. */
+
+/* Bloco de abertura com titulo e resumo institucional. */
 .secao-pagina-topo {
     text-align: center;
     padding: 72px 30px 56px;
@@ -23,6 +26,7 @@
     line-height: 1.7;
 }
 
+/* Secao de historia com texto e imagem lado a lado no desktop. */
 .secao-historia {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -59,6 +63,7 @@
     object-fit: cover;
 }
 
+/* Cards de valores da marca. */
 .descricao-secao {
     color: var(--texto);
     font-size: 1rem;
@@ -107,6 +112,7 @@
     line-height: 1.65;
 }
 
+/* Cards da equipe e seus dados principais. */
 .secao-equipe {
     scroll-margin-top: 90px;
 }
@@ -164,6 +170,7 @@
     line-height: 1.65;
 }
 
+/* Chamada final para voltar as linhas de produtos. */
 .secao-cta-pagina {
     background: linear-gradient(135deg, var(--champagne) 0%, var(--branco) 52%, var(--cinza-azulado) 100%);
     border-radius: 22px;
@@ -187,6 +194,7 @@
     margin-top: 28px;
 }
 
+/* Responsividade para tablets e telas medias. */
 @media (max-width: 1024px) {
     .secao-historia {
         grid-template-columns: 1fr;
@@ -210,6 +218,7 @@
     }
 }
 
+/* Responsividade para celulares. */
 @media (max-width: 768px) {
     .secao-pagina-topo {
         padding: 52px 20px 42px;

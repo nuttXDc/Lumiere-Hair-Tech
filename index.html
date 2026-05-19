@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<!-- Pagina inicial da Lumiere Hair Tech com navegacao, banners e linhas de produtos. -->
 <html lang="pt-br">
 <head>
+    <!-- Metadados, icone do site e folhas de estilo usadas na pagina. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumière Hair Tech</title>
@@ -10,6 +12,7 @@
 </head>
 <body>
     <main class="pg-container">
+        <!-- Cabecalho fixo com logo, links principais e acoes rapidas. -->
         <header class="topo-site">
             <nav class="menu" id="menu">
                 <div class="logo">
@@ -40,11 +43,14 @@
         </header>
 
         <div class="conteudo">
+        <!-- Hero com carrossel controlado apenas por HTML e CSS. -->
         <section class="hero page-title" id="banners">
+            <!-- Radios invisiveis guardam o estado do banner ativo. -->
             <input type="radio" name="banner" id="banner-1" checked>
             <input type="radio" name="banner" id="banner-2">
             <input type="radio" name="banner" id="banner-3">
 
+            <!-- Conjunto de imagens exibidas pelo carrossel. -->
             <div class="hero-slides">
                 <article class="hero-slide slide-estilos">
                     <img src="assets/banner-3.png" alt="Banner com tecnologia Lumière para todos os estilos">
@@ -57,6 +63,7 @@
                 </article>
             </div>
 
+            <!-- Cada grupo de setas aparece conforme o radio selecionado. -->
             <div class="setas-banner setas-1">
                 <label for="banner-3" class="controle controle-esquerda" aria-label="Banner anterior">
                     <i class="bi bi-chevron-left"></i>
@@ -84,6 +91,7 @@
                 </label>
             </div>
 
+            <!-- Indicadores inferiores para acesso direto aos banners. -->
             <div class="indicadores-banner">
                 <label for="banner-1" aria-label="Ir para o banner 1"></label>
                 <label for="banner-2" aria-label="Ir para o banner 2"></label>
@@ -91,6 +99,7 @@
             </div>
         </section>
 
+        <!-- Resumo institucional com chamada para a pagina Quem Somos. -->
         <section class="sessao secao-marca" id="sobre-marca">
             <div class="conteudo-marca">
                 <span class="tag-secao">Sobre a Marca</span>
@@ -108,6 +117,7 @@
             </div>
         </section>
 
+        <!-- Cards das principais linhas de produtos da marca. -->
         <section class="sessao secao-linhas destaque" id="linhas">
             <div class="cabecalho-secao">
                 <h2>Explore Nossas Linhas</h2>
@@ -142,6 +152,7 @@
         </div>
     </main>
 
+    <!-- Rodape com endereco, canais de contato e redes sociais. -->
     <footer class="rodape-lumiere">
         <div class="rodape-conteudo">
             <div class="rodape-bloco">

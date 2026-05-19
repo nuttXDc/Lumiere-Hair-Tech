@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap");
 
+/* Variaveis globais de cores, sombras e tons usados em todo o site. */
 :root {
     --dourado: #cba98a;
     --dourado-rgb: 203, 169, 138;
@@ -31,12 +32,14 @@
     --sombra-cta: 0 10px 24px rgba(var(--dourado-rgb), 0.18);
 }
 
+/* Reset basico para reduzir inconsistencias entre navegadores. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base visual compartilhada por todas as paginas. */
 html {
     scroll-behavior: smooth;
 }
@@ -70,6 +73,7 @@ a {
     color: inherit;
 }
 
+/* Cabecalho fixo/sticky com logo, navegacao central e acoes rapidas. */
 .topo-site {
     position: sticky;
     top: 0;
@@ -192,12 +196,14 @@ a {
     transform: translateY(-1px);
 }
 
+/* Container principal limita a largura do conteudo em telas grandes. */
 .conteudo {
     max-width: 1366px;
     margin: 0 auto;
     padding: 12px 10px 42px;
 }
 
+/* Hero da home: carrossel CSS baseado nos radios escondidos. */
 .hero {
     position: relative;
     min-height: 620px;
@@ -250,6 +256,7 @@ a {
     transform: translateX(-66.6666%);
 }
 
+/* Setas e indicadores do carrossel. */
 .setas-banner {
     display: none;
 }
@@ -314,6 +321,7 @@ a {
     background: rgba(var(--dourado-rgb), 0.88);
 }
 
+/* Estrutura padrao de secoes e titulos. */
 .sessao {
     padding: 64px 30px;
     background-color: var(--branco);
@@ -344,6 +352,7 @@ a {
     margin-bottom: 12px;
 }
 
+/* Secao institucional da home. */
 .conteudo-marca h1 {
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(2.4rem, 4vw, 3.375rem);
@@ -369,6 +378,7 @@ a {
     object-fit: cover;
 }
 
+/* Botoes de chamada para acao reutilizados no site. */
 .cta {
     display: inline-flex;
     align-items: center;
@@ -400,6 +410,7 @@ a {
     background: rgba(var(--dourado-rgb), 0.08);
 }
 
+/* Cards e grades compartilhados por produtos e blocos de conteudo. */
 .destaque {
     background-color: var(--cinza-claro);
 }
@@ -428,6 +439,7 @@ a {
     scroll-margin-top: 90px;
 }
 
+/* Cards das linhas de produto na pagina inicial. */
 .grade-produtos {
     justify-content: center;
 }
@@ -464,6 +476,7 @@ a {
     background: var(--dourado-escuro);
 }
 
+/* Rodape com informacoes institucionais, contato e redes sociais. */
 .rodape-lumiere {
     background: linear-gradient(180deg, var(--rodape-fundo) 0%, var(--branco) 100%);
     border-top: 1px solid rgba(var(--rodape-dourado-rgb), 0.28);
@@ -539,6 +552,7 @@ a {
     color: var(--rodape-texto);
 }
 
+/* Ajustes para tablets e telas intermediarias. */
 @media (max-width: 1024px) {
     .menu {
         flex-wrap: wrap;
@@ -616,6 +630,7 @@ a {
     }
 }
 
+/* Layout mobile com cabecalho fixo em coluna e secoes compactas. */
 @media (max-width: 768px) {
     body {
         padding-top: 138px;
@@ -777,6 +792,7 @@ a {
     }
 }
 
+/* Refinos para celulares estreitos. */
 @media (max-width: 560px) {
     body {
         padding-top: 126px;
