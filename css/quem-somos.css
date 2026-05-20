@@ -141,11 +141,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.avatar-membro i {
-    font-size: 42px;
-    color: var(--dourado);
+.avatar-membro img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .conteudo-membro h3 {
